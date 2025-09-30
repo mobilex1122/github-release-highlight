@@ -1,0 +1,77 @@
+.ghrl_state {
+    position: fixed;
+    background-color: var(--bgColor-closed-emphasis);
+    color: var(--fgColor-onEmphasis);
+    border-radius: 9999px;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 8000;
+    width: 1rem;
+    height: 1rem;
+    box-sizing: border-box;
+
+    border: var(--bgColor-success-emphasis) 0px solid;
+    border: transparent solid 0px;
+    transition: background-color 200ms, scale 500ms, translate 500ms, border 0ms, opacity 500ms;
+
+    cursor:help;
+
+    scale: 0.5;
+
+    animation: forwards 500ms ghrl_show;
+}
+
+
+.ghrl_error {
+    scale: 1;
+    position: fixed;
+    background-color: var(--bgColor-danger-emphasis);
+}
+
+.ghrl_done {
+    border-width: 0rem;
+    background-color: var(--bgColor-done-emphasis);
+}
+
+
+.ghrl_spinner {
+    opacity: 1;
+    scale: 1;
+    border-width: 0.2rem;
+    border-color: var(--bgColor-closed-emphasis);
+    border-block-color: var(--fgColor-onEmphasis);
+
+    animation: forwards ghrl_spin 1s linear infinite;
+}
+.ghrl_hide {
+
+    animation: forwards 500ms ghrl_hide;
+}
+
+@keyframes ghrl_spin {
+    to {
+        scale: 1;
+        rotate: 1turn;
+    }
+}
+
+
+@keyframes ghrl_show {
+    from {
+        scale: 2;
+        opacity: 0;
+    }
+}
+
+@keyframes ghrl_hide {
+    to {
+        scale: 0;
+        opacity: 0;
+    }
+}
+
+
+.ghrl_match {
+    background-color: var(--bgColor-success-muted);
+    color: var(--fgColor-success);
+}

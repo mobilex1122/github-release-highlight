@@ -1,0 +1,23 @@
+{
+  "name": "Github Release Highlight",
+  "description": "Quickly Find releases for your system.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "toolbar/index.html",
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "service_worker": "worker.js"
+  },
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "js": ["gh/ghrh.js"],
+      "css" : ["ghrh.css"],
+      "matches": [
+        "https://github.com/*"
+      ]
+    }
+  ]
+}
