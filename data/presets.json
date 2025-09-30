@@ -1,7 +1,18 @@
 {
-    "Debian (amd64)": [
-        "[-_]amd64.*\\.deb"
+    "General (amd64)": [
+        ".*amd64.*"
     ],
+
+    "General (arm64)": [
+        ".*amd64.*"
+    ],
+
+    
+    "Debian (amd64)": [
+        "[-_]amd64.*\\.(deb|tar.gz|AppImage|appimage)"
+    ],
+
+
 
 
     "Windows (amd64)": [
